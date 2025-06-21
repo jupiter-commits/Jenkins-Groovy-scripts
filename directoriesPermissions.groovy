@@ -1,3 +1,5 @@
+import groovy.io.FileType
+
 jenkinsPath = System.getenv("JENKINS_HOME")
 relativePath = "/workspace"
 
@@ -12,4 +14,5 @@ dirList.each {
   println it.path
   println it.canWrite()
   println java.nio.file.Files.getOwner(it.toPath())
+  println ""
 }

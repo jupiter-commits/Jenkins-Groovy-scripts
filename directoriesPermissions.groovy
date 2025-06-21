@@ -10,4 +10,6 @@ dirPath.eachDir() { dir ->
 
 dirList.each {
   println it.path
+  println it.canWrite()
+  println java.nio.file.Files.getOwner(it.toPath())
 }
